@@ -4,25 +4,24 @@
 ![Poster](Poster.png)
 
 ## Introduction
-The purpose of this project is to provide short summaries of the given text using NLP based Deep Learning Models. This model would be beneficial for any person like teacher, student, scientist, etc. who doesn’t have time to read large body of text and want the gist of it. This project could also be helpful for developing summary engines/websites where the user could get summaries of any type of text. This project could act as a base for future improvements in the field of Natural Language Processing, Sequence-to-Sequence models and Transformer models.
+This project aims to deliver concise summaries of provided text through the utilization of NLP-based Deep Learning Models. The intended beneficiaries encompass individuals such as teachers, students, scientists, and others pressed for time, seeking a quick understanding of extensive textual content. Furthermore, the project holds potential utility in constructing summary engines or websites, offering users the ability to obtain summaries for various types of text. Additionally, it serves as a foundational initiative, contributing to advancements in Natural Language Processing, Sequence-to-Sequence models, and Transformer models.
 
 ## Methodology
 
-### Obtaining input from the user: 
-The user is provided with a user interface i.e. a webpage, wherein the user is provided with a text area to enter the text.
+### User Input Acquisition:
+Users interact with a web interface, presenting a webpage featuring a text area for input.
 
-### Processing the input obtained from the user: 
-The input obtained from the user is then provided as an input to the respective Attention-based Seq2Seq LSTM/GRU or Transformer model as per the domain or size of text. Flask framework is used to transfer the data from the webpage to the Python script where the input is processed. Flask is a micro web framework written in Python. It is classified as a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
+### Input Processing:
+The user-inputted text is sent to the relevant model—Attention-based Seq2Seq LSTM/GRU or Transformer—based on text size or domain. Flask, a Python micro web framework, facilitates data transfer from the webpage to the Python script for processing.
 
 ### Attention-based Seq2Seq LSTM/GRU:
-The Attention-based Seq2Seq Encoder-Decoder LSTM/GRU is a recurrent neural network designed to address sequence-to-sequence problems using attention mechanism. Our approach uses the data from a text file wherein the articles and the corresponding summaries are provided. The data is processed into Input and Target tokens. The input tokens are used as an input to the encoder and the target tokens are used as an input to the decoder. The encoded inputs and the decoded inputs are then used to train the model. The decoded sequences are then converted back to a readable form. The user input is then provided to the model to obtain a corresponding decoded sequence i.e. the required summary.
+Employing a recurrent neural network architecture, specifically Attention-based Seq2Seq Encoder-Decoder LSTM/GRU, this model addresses sequence-to-sequence challenges using an attention mechanism. Training involves input tokens for encoding and target tokens for decoding. The model processes data from text files containing articles and corresponding summaries. The trained model decodes user input, generating a readable summary.
 
 ### Transformer Model:
-The Transformer is a transduction model which is entirely based on an attention mechanism to draw global dependencies between input and output. It replaces recurrent layers mostly used in encoder-decoder architectures with multi-headed self-attention layers. It allows for significantly more parallelization so it can be trained significantly faster than recurrent or convolution-based architectures.
+The Transformer model, a transduction model reliant on attention mechanisms, replaces traditional recurrent layers with multi-headed self-attention layers. This design allows for enhanced parallelization, resulting in faster training compared to recurrent or convolution-based architectures.
 
-### Execution of Text and Display of Summary:
-The decoded sequence i.e. the abstractive summary is generated and displayed on to the webpage as a result of the input text provided by the user
-
+### Summary Generation and Display:
+The decoded sequence, representing the abstractive summary, is generated based on user input. This summary is then displayed on the webpage, offering users a concise representation of the provided text.
 
 ## Result
 
